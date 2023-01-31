@@ -1,0 +1,5 @@
+install.phase4=\extract(include:IntegrationServer/replicate/inbound/_DISPLAY_FIX_NAME_JAR_);\
+installPackage(packageFile:_DISPLAY_FIX_NAME_JAR_,packageName:_TARGET_PACKAGE_);\
+
+
+

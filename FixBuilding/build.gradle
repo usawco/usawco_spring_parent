@@ -1,0 +1,33 @@
+/*
+ * Gradle build file for FixBuilding package.
+ * 
+ * To use this:
+ *  - copy tests/utils/FixBuilding to server/product/packages/FixBuilding
+ *  - remove server/product/packages/FixBuilding/code/classes
+ *  - remove server/product/packages/FixBuilding/ns
+ *  - remove server/product/packages/FixBuilding/staging
+ *  - start IS
+ *
+ * Package should be available at: localhost:5555/FixBuilding
+ */
+
+label = 'FixBuilding'
+description  = 'FixBuilding package'
+
+sourceSets.main.java.srcDirs = ['code/source'] //TODO :: Remove this after moving to convention based layout
+
+dependencies {
+    implementation(
+        fileTree('code/jars'),
+        'org.apache.axis:axis:1.4.0',
+        'org.apache.commons:commons-discovery:0.4.0',
+    )
+
+    providedCompile( 
+        project.sag_const.modules.httpclient
+    )
+}
+
+pkg {
+    include 'code/jars/**/*.jar'
+}
