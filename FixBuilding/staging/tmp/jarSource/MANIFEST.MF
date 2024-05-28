@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: mom.is.pkg.fixbuilding.sources
-Implementation-Version: 9.5.1.0001-0209
-Implementation-Vendor-Id: com.softwareag
-Implementation-Vendor: Software AG
-Created-By: SAG Build Automation System
-
